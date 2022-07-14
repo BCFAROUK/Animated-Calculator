@@ -1,4 +1,4 @@
-# Animated-Calculator
+# Animated Calculator (HTML/CSS/JS) - Source Code
 
 
 <picture>
