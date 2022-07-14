@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap");
+
+* {
+  margin: 0;
+  top: 0;
+
+  font-family: "Rubik Moonrocks", cursive;
+}
+
+.container {
+  border: 1px solid #cccccc;
+
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.75);
+
+  border-radius: 20px;
+
+  position: absolute;
+
+  top: 55%;
+
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 450px;
+
+  height: 400px;
+
+  background: #cfcfcf81;
+}
+
+.keys {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-gap: 10px;
+
+  padding: 10px;
+
+  margin: auto;
+}
+
+.button {
+  height: 60px;
+
+  padding: 5px;
+
+  background-color: #fff;
+
+  border-radius: 3px;
+
+  border: 1px solid #c4c4c4;
+
+  background-color: transparent;
+
+  font-size: 2rem;
+
+  color: #333;
+
+  cursor: url("cursor.png"), auto;
+
+  background-image: linear-gradient(
+    to bottom,
+    transparent,
+    transparent 50%,
+    rgba(0, 0, 0, 0.04)
+  );
+
+  box-shadow: inset 0 0 0 1px #ffffff0d, inset 0 1px 0 0 #ffffff73,
+    inset 0 -1px 0 0 #ffffff26, 0 1px 0 0 #ffffff26;
+
+  text-shadow: 0 1px #ffffff66;
+
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.button:hover {
+  background-color: #0003b43a;
+}
+
+@keyframes beat {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(0.8, 0.8);
+    transform: scale(0.8, 0.8);
+  }
+}
+
+.button:focus {
+  -webkit-animation: beat 1s ease-in-out backwards;
+  animation: beat 1s ease-in-out backwards;
+}
+.button:active {
+  -webkit-animation: none;
+  animation: none;
+}
+
+.operator {
+  color: #fff;
+
+  background-color: #b702ffa4;
+
+  border-radius: 4px;
+
+  border: 1px solid #0000005d;
+
+  cursor: url("cursor.png"), auto;
+}
+
+.operator:hover {
+  color: #fff;
+
+  background-color: #cd02f55d;
+
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.clear {
+  background-color: #f0595eb2;
+
+  border-color: #b03539a6;
+
+  color: #fff;
+
+  width: 80px;
+
+  height: 30px;
+
+  margin-left: 20px;
+
+  cursor: url("cursor.png"), auto;
+
+  border-radius: 4px;
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+.clear:focus {
+  -webkit-animation: beat 1s ease-in-out backwards;
+  animation: beat 1s ease-in-out backwards;
+}
+
+.clear:active {
+  -webkit-animation: none;
+  animation: none;
+}
+
+.clear:hover {
+  background-color: #f1737771;
+}
+
+.equal-sign {
+  background-color: #25a8e09d;
+
+  border-color: #25a8e02c;
+
+  color: #fff;
+}
+
+.equal-sign:hover {
+  background-color: #4e9ed496;
+}
+
+.screen {
+  background-color: #abdbe7a2;
+
+  justify-content: left;
+
+  color: black;
+
+  font-size: 16px;
+
+  width: 50%;
+
+  height: 30%;
+
+  cursor: url("cursor.png"), auto;
+
+  padding: 10px;
+
+  padding-left: 40%;
+
+  margin: auto;
+
+  margin-bottom: 10px;
+
+  margin-left: 80px;
+
+  border-radius: 10px;
+}
+
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+body {
+  margin: 0;
+  cursor: url("cursor.png"), auto;
+}
+
+p:hover {
+  cursor: url("cursor.png"), auto;
+}
+h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  font-size: 48px;
+}
+p {
+  font-family: "Lato", sans-serif;
+  letter-spacing: 1px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  color: white;
+}
+.logo {
+  width: 50px;
+  fill: white;
+  padding-right: 15px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height: 65vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+}
+
+.content {
+  position: relative;
+  height: 20vh;
+  text-align: center;
+  background-color: white;
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .waves {
+    height: 40px;
+    min-height: 40px;
+  }
+  .content {
+    height: 30vh;
+  }
+  h1 {
+    font-size: 24px;
+  }
+}
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
